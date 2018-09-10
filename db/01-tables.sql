@@ -39,7 +39,7 @@ CREATE TABLE users
 CREATE TABLE participants (
     id serial,
     name character varying(180) NOT NULL,
-    ci character varying(15) NOT NULL,
+    document character varying(15) NOT NULL,
     email character varying(90) NOT NULL,
     mobile numeric(8,0),
     city character varying(60),

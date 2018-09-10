@@ -19,7 +19,7 @@ class ParticipantsFixture extends TestFixture
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 10, 'autoIncrement' => true, 'default' => null, 'null' => false, 'comment' => null, 'precision' => null, 'unsigned' => null],
         'name' => ['type' => 'string', 'length' => 180, 'default' => null, 'null' => false, 'collate' => null, 'comment' => null, 'precision' => null, 'fixed' => null],
-        'ci' => ['type' => 'string', 'length' => 15, 'default' => null, 'null' => false, 'collate' => null, 'comment' => null, 'precision' => null, 'fixed' => null],
+        'document' => ['type' => 'string', 'length' => 15, 'default' => null, 'null' => false, 'collate' => null, 'comment' => null, 'precision' => null, 'fixed' => null],
         'email' => ['type' => 'string', 'length' => 90, 'default' => null, 'null' => false, 'collate' => null, 'comment' => null, 'precision' => null, 'fixed' => null],
         'mobile' => ['type' => 'decimal', 'length' => 8, 'default' => null, 'null' => true, 'comment' => null, 'precision' => null, 'unsigned' => null],
         'city' => ['type' => 'string', 'length' => 60, 'default' => null, 'null' => true, 'collate' => null, 'comment' => null, 'precision' => null, 'fixed' => null],
@@ -51,7 +51,7 @@ class ParticipantsFixture extends TestFixture
             [
                 'id' => 1,
                 'name' => 'Lorem ipsum dolor sit amet',
-                'ci' => 'Lorem ipsum d',
+                'document' => 'Lorem ipsum d',
                 'email' => 'Lorem ipsum dolor sit amet',
                 'mobile' => 1.5,
                 'city' => 'Lorem ipsum dolor sit amet',
@@ -62,8 +62,8 @@ class ParticipantsFixture extends TestFixture
                 'type' => 'Lorem ipsum dolor sit ame',
                 'printed' => 'Lorem ipsum dolor sit ame',
                 'status' => 'Lorem ipsum dolor sit ame',
-                'created' => 1536444072,
-                'modified' => 1536444072,
+                'created' => 1536609809,
+                'modified' => 1536609809,
                 'created_by' => 1,
                 'modified_by' => 1
             ],

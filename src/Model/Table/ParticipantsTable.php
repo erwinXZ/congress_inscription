@@ -58,10 +58,10 @@ class ParticipantsTable extends Table
             ->notEmpty('name');
 
         $validator
-            ->scalar('ci')
-            ->maxLength('ci', 15)
-            ->requirePresence('ci', 'create')
-            ->notEmpty('ci');
+            ->scalar('document')
+            ->maxLength('document', 15)
+            ->requirePresence('document', 'create')
+            ->notEmpty('document');
 
         $validator
             ->email('email')
