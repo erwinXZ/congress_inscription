@@ -10,12 +10,12 @@
     </ol>
 </section>
 
-<section class="content">
+<section class="content ">
     <div class="row">
         <div class="col-md-12">
             <div class="box box-primary no-margin-bottom">
                 <div class="box-header with-border">
-                    <a class="btn btn-sm btn-success" data-toggle="modal" id="btnAddUser"><i class="fa fa-plus-circle"></i> Nuevo</a>
+                    <a class="btn btn-sm btn-info" data-toggle="modal" id="btnAddUser"><i class="fa fa-plus-circle"></i> Nuevo</a>
                     <a class="btn btn-sm btn-warning" data-toggle="modal" id="btnEditUser"><i class="fa fa-edit"></i> Modificar</a>
                     <a class="btn btn-sm btn-danger" data-toggle="modal" id="btnDeleteUser"><i class="fa fa-trash"></i> Borrar</a>
                 </div>

@@ -8,7 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $name
- * @property string $ci
+ * @property string $document
  * @property string $email
  * @property float $mobile
  * @property string $city
@@ -38,7 +38,7 @@ class Participant extends Entity
      */
     protected $_accessible = [
         'name' => true,
-        'ci' => true,
+        'document' => true,
         'email' => true,
         'mobile' => true,
         'city' => true,

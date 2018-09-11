@@ -235,14 +235,14 @@ class ParticipantsController extends AppController
 
         $this->Participants->updateAll(
             //cambiar en produccion a Y
-            ['printed' => 'Y'],
+            ['printed' => 'N'],
             ['id IN' => $array_ids]
         );
     }
 
     public function certificate () {
         $participants = $this->Participants->find('all', [
-            'fields' => ['id', 'name', 'occupation'],
+            'fields' => ['id', 'name', 'occupation','type'],
             'conditions' => [
                 'status' => 'A'
             ]

@@ -72,7 +72,7 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Guardar</button>
+            <button type="submit" class="btn btn-info"><i class="fa fa-save"></i> Guardar</button>
             <button type="button" class="btn btn-danger" onclick="$('#modalParticipants').modal('hide')"><i class="fa fa-times"></i> Cancelar</button>
         </div>
         <?= $this->Form->end() ?>
