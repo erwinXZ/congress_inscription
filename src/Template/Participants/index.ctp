@@ -137,7 +137,7 @@ echo $this->Form->end();
                     width: 100,
                     stype: "select",
                     searchoptions: {value: "<?php echo $materials; ?>"},
-                    formatter: materialsFormatter
+                    formatter: statusFormatter
                 }
             ],
             rowNum: 20,

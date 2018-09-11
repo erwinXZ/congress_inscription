@@ -72,7 +72,7 @@ CREATE TABLE participants (
     occupation character varying(180),
     university character varying(180),
     career character varying(180),
-    materials boolean DEFAULT false,
+    materials character DEFAULT 'N',
     type character DEFAULT 'S',
     printed character DEFAULT 'N',
     status character DEFAULT 'A',
