@@ -14,9 +14,9 @@ foreach($participants as $participant){
     $pdf->AddPage();
     $type = $participant->type;
     //certificado de Organizador
-    if($participant->type == 'O'){
-        $pdf->Image(WWW_ROOT . 'img' . DS . 'certificate-organizador.jpg', 0, 0, 279);
-    }
+    // if($participant->type == 'O'){
+    //     $pdf->Image(WWW_ROOT . 'img' . DS . 'certificate-organizador.jpg', 0, 0, 279);
+    // }
     //Certifiacado de Asistencia 
     if($participant->type == 'P' || $participant->type == 'S'){
         $pdf->Image(WWW_ROOT . 'img' . DS . 'certificate.jpg', 0, 0, 279);
@@ -25,7 +25,7 @@ foreach($participants as $participant){
     if($participant->type == 'E'){
         $pdf->Image(WWW_ROOT . 'img' . DS . 'certificate.jpg', 0, 0, 279);
     }
-    $pdf->SetFont('robotoblack_allfontes', 'B', 24);// opsional "roboto"
+    $pdf->SetFont('times', 'B', 24);// opsional "roboto"
 
     $pdf->StartTransform();
     $pdf->setTextRenderingMode($stroke=0.25, $fill=true, $clip=false);

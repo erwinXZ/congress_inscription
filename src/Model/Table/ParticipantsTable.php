@@ -60,13 +60,11 @@ class ParticipantsTable extends Table
         $validator
             ->scalar('document')
             ->maxLength('document', 15)
-            ->requirePresence('document', 'create')
-            ->notEmpty('document');
+            ->allowEmpty('document');
 
         $validator
             ->email('email')
-            ->requirePresence('email', 'create')
-            ->notEmpty('email');
+            ->allowEmpty('email');
 
         $validator
             ->decimal('mobile')
@@ -96,6 +94,11 @@ class ParticipantsTable extends Table
             ->scalar('career')
             ->maxLength('career', 180)
             ->allowEmpty('career');
+
+        $validator
+            ->scalar('materials')
+            ->maxLength('materials', 1)
+            ->allowEmpty('materials');
 
         $validator
             ->scalar('type')

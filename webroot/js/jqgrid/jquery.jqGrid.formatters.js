@@ -9,6 +9,17 @@ function statusFormatter(cellValue, options, rowObject)
     }
 }
 
+function materialsFormatter(cellValue, options, rowObject)
+{
+    if (cellValue == 'Y') {
+        return 'Entregado';
+    } else if (cellValue == 'N') {
+        return 'Pendiente';
+    } else {
+        return '';
+    }
+}
+
 function genderFormatter(cellValue, options, rowObject)
 {
     if (cellValue == 'F') {

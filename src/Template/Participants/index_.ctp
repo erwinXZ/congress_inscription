@@ -25,6 +25,7 @@
                 <th scope="col"><?= $this->Paginator->sort('occupation') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('university') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('career') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('materials') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('type') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('printed') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('status') ?></th>
@@ -44,6 +45,7 @@
                 <td><?= h($participant->occupation) ?></td>
                 <td><?= h($participant->university) ?></td>
                 <td><?= h($participant->career) ?></td>
+                <td><?= h($participant->materials) ?></td>
                 <td><?= h($participant->type) ?></td>
                 <td><?= h($participant->printed) ?></td>
                 <td><?= h($participant->status) ?></td>

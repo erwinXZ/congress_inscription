@@ -16,6 +16,7 @@ use Cake\ORM\Entity;
  * @property string $occupation
  * @property string $university
  * @property string $career
+ * @property string $materials
  * @property string $type
  * @property string $printed
  * @property string $status
@@ -46,6 +47,7 @@ class Participant extends Entity
         'occupation' => true,
         'university' => true,
         'career' => true,
+        'materials' => true,
         'type' => true,
         'printed' => true,
         'status' => true,

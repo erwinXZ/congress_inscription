@@ -130,6 +130,14 @@ echo $this->Form->end();
                     stype: "select",
                     searchoptions: {value: "<?php echo $status; ?>"},
                     formatter: statusFormatter
+                },
+                {
+                    label: "Material",
+                    name: 'materials',
+                    width: 100,
+                    stype: "select",
+                    searchoptions: {value: "<?php echo $materials; ?>"},
+                    formatter: materialsFormatter
                 }
             ],
             rowNum: 20,

@@ -30,6 +30,7 @@
             echo $this->Form->control('occupation');
             echo $this->Form->control('university');
             echo $this->Form->control('career');
+            echo $this->Form->control('materials');
             echo $this->Form->control('type');
             echo $this->Form->control('printed');
             echo $this->Form->control('status');

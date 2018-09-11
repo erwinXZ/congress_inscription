@@ -49,6 +49,10 @@
             <td><?= h($participant->career) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Materials') ?></th>
+            <td><?= h($participant->materials) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Type') ?></th>
             <td><?= h($participant->type) ?></td>
         </tr>

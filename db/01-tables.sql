@@ -1,3 +1,28 @@
+CREATE TABLE participants (
+    id serial,
+    name character varying(180) NOT NULL,
+    document character varying(15),
+    email character varying(90),
+    mobile numeric(8,0),
+    city character varying(60),
+    country character varying(30),
+    occupation character varying(180),
+    university character varying(180),
+    career character varying(180),
+    materials character DEFAULT 'N',
+    type character DEFAULT 'S',
+    printed character DEFAULT 'N',
+    status character DEFAULT 'A',
+    created timestamp without time zone NOT NULL,
+    modified timestamp without time zone,
+    created_by integer NOT NULL,
+    modified_by integer,
+    PRIMARY KEY (id)
+);
+
+
+
+
 CREATE TABLE roles
 (
     id serial NOT NULL,
@@ -39,15 +64,16 @@ CREATE TABLE users
 CREATE TABLE participants (
     id serial,
     name character varying(180) NOT NULL,
-    document character varying(15) NOT NULL,
-    email character varying(90) NOT NULL,
+    document character varying(15),
+    email character varying(90),
     mobile numeric(8,0),
     city character varying(60),
     country character varying(30),
     occupation character varying(180),
     university character varying(180),
     career character varying(180),
-    type character DEFAULT 'P',
+    materials boolean DEFAULT false,
+    type character DEFAULT 'S',
     printed character DEFAULT 'N',
     status character DEFAULT 'A',
     created timestamp without time zone NOT NULL,

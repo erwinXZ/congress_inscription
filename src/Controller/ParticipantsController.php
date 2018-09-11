@@ -19,7 +19,8 @@ class ParticipantsController extends AppController
         $printed = ':[Todos];Y:Impreso;N:Sin imprimir';
         $gender = ':[Todos];F:Femenino;M:Masculino';
         $status = ':[Todos];A:Activo;I:Inactivo';
-        $this->set(compact('type', 'printed', 'gender', 'status'));
+        $materials = ':[Todos];Y:Entregado;N:Pendiente';
+        $this->set(compact('type', 'printed', 'gender', 'status', 'materials'));
     }
 
     /**
@@ -37,6 +38,7 @@ class ParticipantsController extends AppController
         $occupation = $this->request->getQuery('occupation');
         $university = $this->request->getQuery('university');
         $career = $this->request->getQuery('career');
+        $materials = $this->request->getQuery('materials');
         $type = $this->request->getQuery('type');
         $printed = $this->request->getQuery('printed');
         $status = $this->request->getQuery('status');
@@ -74,6 +76,9 @@ class ParticipantsController extends AppController
         if (!empty($career)) {
             $conditions['career ILIKE'] = '%' . $career . '%';
         }
+        if (!empty($materials)) {
+            $conditions['materials'] = $materials;
+        }
         if (!empty($type)) {
             $conditions['type'] = $type;
         }
@@ -88,7 +93,7 @@ class ParticipantsController extends AppController
                     'fields' => [
                         'id', 'document',
                         'name', 'email', 'mobile', 'country', 'city',
-                        'occupation', 'university', 'career',
+                        'occupation', 'university', 'career', 'materials',
                         'type', 'printed', 'status'
                     ],
                     'contain' => []
@@ -128,6 +133,7 @@ class ParticipantsController extends AppController
             $participant = $this->Participants->patchEntity($participant, $this->request->getData());
             $participant->printed = empty($this->request->getData('printed')) ? 'N' : $participant->printed;
             $participant->status = empty($this->request->getData('status')) ? 'I' : $participant->status;
+            $participant->materials = empty($this->request->getData('materials')) ? 'N' : $participant->materials;
             $participant->created_by = $this->Auth->user('id');
             if (!$this->Participants->save($participant)) {
                 $data['error'] = 1;
@@ -162,6 +168,7 @@ class ParticipantsController extends AppController
             $participant->name = mb_strtoupper($participant->name);
             $participant->printed = empty($this->request->getData('printed')) ? 'N' : $participant->printed;
             $participant->status = empty($this->request->getData('status')) ? 'I' : $participant->status;
+            $participant->materials = empty($this->request->getData('materials')) ? 'N' : $participant->materials;
             $participant->modified_by = $this->Auth->user('id');
             if (!$this->Participants->save($participant)) {
                 $data['error'] = 1;

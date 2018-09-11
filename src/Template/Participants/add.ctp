@@ -68,6 +68,13 @@
                         </label>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="materials" class="icheck" value="Y"<?php echo ($participant->materials == 'Y') ? 'checked' : ''; ?>> Material entregado
+                        </label>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="modal-footer">
