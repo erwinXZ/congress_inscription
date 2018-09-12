@@ -25,7 +25,7 @@ class Pdf extends TCPDF
         $this->SetPrintFooter(false);
 
         //cambiar margenes
-        $this->SetMargins(0, 0, 0, 0);
+        $this->SetMargins(10, 10, 10, 10);
 
         //set auto page breaks
         $this->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);

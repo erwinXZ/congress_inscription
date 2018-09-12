@@ -242,7 +242,7 @@ class ParticipantsController extends AppController
 
         $this->Participants->updateAll(
             //cambiar en produccion a Y
-            ['printed' => 'N'],
+            ['printed' => 'Y'],
             ['id IN' => $array_ids]
         );
     }
